@@ -1,19 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --BRAND_BLUE: #1f80e0;
+}
+
 body {
   background-color: #000;
 }
-
-.logo {
-  width: 115px;
-  height: 42px;
-  padding: 0px 0px 7px;
+.email-or-fb-signin {
+  width: 100%;
+  min-height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--BRAND_BLUE);
+  background-color: rgba(31, 127, 224, 0.1);
+  border: 1px solid var(--BRAND_BLUE);
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
 }
-.login-text {
+
+.heading-text {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.4;
+  color: #fff;
+}
+.country-code {
+  color: #fff;
+}
+.or-div {
+  color: #fff;
 }
