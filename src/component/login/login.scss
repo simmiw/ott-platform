@@ -1,31 +1,33 @@
-* {
-  box-sizing: border-box;
-}
 :root {
-  --BRAND_BLUE: #1f80e0;
+  --brand-color: #1f80e0;
 }
 
-body {
-  background-color: #000;
+.main-container {
+  min-width: 290px;
+  max-width: 350px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .email-or-fb-signin {
+  margin-top: 40px;
   width: 100%;
   min-height: 50px;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  color: var(--BRAND_BLUE);
+  color: var(--brand-color);
   background-color: rgba(31, 127, 224, 0.1);
-  border: 1px solid var(--BRAND_BLUE);
+  border: 1px solid var(--brand-color);
   border-radius: 5px;
   padding: 5px;
   display: block;
 }
 
+.heading{
+  margin-top: 80px;
+  margin-bottom: 36px;
+}
 .heading-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -34,7 +36,39 @@ body {
 }
 .country-code {
   color: #fff;
+  padding-right: 8px;
+  border-right: 1px solid var(--brand-color);
+  margin-right: 8px;
 }
+
 .or-div {
   color: #fff;
+}
+
+.input-form {
+  padding: 50px;
+  width: 100%;
+}
+
+.phone-input-container {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid var(--brand-color);
+}
+
+.login-input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  color: #fff;
+}
+
+.phone-number-container {
+  border-bottom: 1px solid var(--brand-color);
+}
+
+.or-div {
+  text-align: center;
 }
