@@ -6,7 +6,7 @@ const Login = () => {
   const [mobileNumber, setMobileNumber] = useState("");
 
   const onMobileNumberChange = (event) => {
-    setMobileNumber(event.target.value);
+    if (event.target.value.length <= 10) setMobileNumber(event.target.value);
   };
   const clearState = () => {
     setMobileNumber("");
