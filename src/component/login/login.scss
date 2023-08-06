@@ -93,3 +93,15 @@
   color: #fff;
   width: 100%;
 }
+
+.email-container {
+  border: 0px solid;
+}
+.email-input {
+  width: 100%;
+  background-color: transparent;
+
+  outline: 0;
+  border-bottom: 1px solid var(--brand-color);
+  height: 40px;
+}
