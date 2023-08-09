@@ -44,6 +44,7 @@
 
 .or-div {
   color: #fff;
+  font-size: 10px;
 }
 
 .input-form {
@@ -72,6 +73,7 @@
 
 .or-div {
   text-align: center;
+  margin-top: 20px;
 }
 .clear-button {
   background-color: transparent;
@@ -87,11 +89,20 @@
 }
 .submit-button {
   text-align: center;
-  padding: 15px 17px 15px 17px;
-  margin-top: 30px;
+  padding: 10px 0 10px 0;
   background-color: var(--brand-color);
   color: #fff;
   width: 100%;
+  outline: none;
+  font-size: 14px;
+  svg {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    margin-left: 1px;
+    margin-top: 2px;
+    align-content: center;
+  }
 }
 
 .email-container {
@@ -100,17 +111,30 @@
 .email-input {
   width: 100%;
   background-color: transparent;
-
-  outline: 0;
+  margin-top: 20px;
+  border: 0;
   border-bottom: 1px solid var(--brand-color);
   height: 40px;
+  color: #fff;
+  outline: none;
 }
 
-.login-with-fb{
+.login-with-fb {
   width: 100%;
-  background-color: var(--brand-color);
-  height: 40px; 
-  margin-top: 40px;
+  background-color: #3f51b5;
+  height: 40px;
+  margin-top: 20px;
   color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  text-transform: none;
 
+  svg {
+    height: 50px;
+    width: 40px;
+    margin-right: 2px;
+    display: inline-block;
+    text-transform: none;
+  }
 }

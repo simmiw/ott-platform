@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./login.scss";
 import Header from "../header/header";
 import { ReactComponent as LeftArrowIcon } from "../../icons/left-arrow.svg";
+import { ReactComponent as FbLogo } from "../../icons/facebook-logo.svg";
+import { ReactComponent as GreaterThanIcon } from "../../icons/greaterthan-icon.svg";
 const Login = () => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +14,7 @@ const Login = () => {
   };
   const clearState = () => {
     setMobileNumber("");
-    setEmail("");
+    setEmailButton("");
   };
 
   const loginViaEmail = (event) => {
@@ -36,7 +38,8 @@ const Login = () => {
               ) : null}
             </div>
             <span className="heading-text">
-              {mobileNumber ? "Continue using phone" : "Login to continue"}
+              {mobileNumber || emailButton ? null : "Login to continue"}
+              {mobileNumber ? "Continue using phone" : null}
               {emailButton ? "Have an Email or Facebook account?" : null}
             </span>
             {mobileNumber || emailButton ? null : (
@@ -48,9 +51,6 @@ const Login = () => {
               </button>
             )}
             <div className="input-login-container">
-              <span className="input-login-text ">
-                Have an Email or Facebook account?
-              </span>
               <div className="email-container">
                 {emailButton ? (
                   <input
@@ -61,15 +61,17 @@ const Login = () => {
                     onChange={loginViaEmail}
                   />
                 ) : null}
-                {emailButton ? (
-                  <button className="login-with-fb">LOGIN WITH FACEBOOK</button>
-                ) : null}
               </div>
             </div>
           </div>
-          {mobileNumber || emailButton ? null : (
-            <div className="or-div">or</div>
-          )}
+          {mobileNumber || emailButton ? (
+            <button className="submit-button">
+              CONTINUE
+              <GreaterThanIcon alt="greaterthan-icon" />
+            </button>
+          ) : null}
+          {mobileNumber ? null : <div className="or-div">OR</div>}
+
           {emailButton ? null : (
             <div className="phone-input-container">
               <span className="country-code">+91</span>
@@ -83,8 +85,11 @@ const Login = () => {
               />
             </div>
           )}
-          {mobileNumber && emailButton ? (
-            <button className="submit-button">CONTINUE</button>
+
+          {emailButton ? (
+            <button className="login-with-fb">
+              <FbLogo alt="fb-logo" /> LOGIN WITH FACEBOOK
+            </button>
           ) : null}
         </div>
       </div>
