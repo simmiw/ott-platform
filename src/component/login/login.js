@@ -46,7 +46,8 @@ const Login = () => {
               <button
                 onClick={emailOrFBLogin}
                 type="button"
-                className="email-or-fb-signin">
+                className="email-or-fb-signin"
+              >
                 Have a Facebook/Email account?
               </button>
             )}
