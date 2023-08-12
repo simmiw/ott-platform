@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./login.scss";
 import { ReactComponent as LeftArrowIcon } from "../../icons/left-arrow.svg";
 

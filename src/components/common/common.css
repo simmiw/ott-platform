@@ -1,0 +1,31 @@
+.tariler-list {
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 40px;
+
+    .trailer {
+        display: inline-block;
+        width: 170px;
+        height: 100px;
+        margin-right: 10px;
+        border-radius: 5px;
+        background-color: #192133;
+    }
+}
+
+
+
+.card-list {
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 30px;
+
+    .card {
+        display: inline-block;
+        width: 140px;
+        height: 170px;
+        margin-right: 10px;
+        border-radius: 5px;
+        background-color: #192133;
+    }
+}
