@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./common.scss";
+import trailersData from "./trailers-data";
 
 const TrailerList = () => {
+  const [trailers, setTrailers] = useState(null);
+
+  useEffect(() => {
+    setTrailers(trailersData);
+  }, []);
+
   return (
     <>
-      <div className="trailer-list">
-        <div className="trailer"></div>
-        <div className="trailer"></div>
-        <div className="trailer"></div>
-        <div className="trailer"></div>
-        <div className="trailer"></div>
-        <div className="trailer"></div>
-      </div>
+      {trailers ? (
+        <div className="trailer-list">
+          <div className="coming-soon-header">Coming Soon</div>
+          {trailers.map((value) => {
+            return (
+              <div key={value.id} className="trailer">
+                <img src={value.imagepath}/>
+                <span className="content-title">{value.title}</span>
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+      
     </>
   );
 };
