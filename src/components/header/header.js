@@ -1,7 +1,20 @@
 import React, { useState } from "react";
 import "./header.scss";
 import image from "../../images/app-logo.svg";
+import { ReactComponent as SerachIcon } from "../../icons/serach-icon.svg";
 import { Link } from "react-router-dom";
+
+function debounce(fn, time) {
+  let timer;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      fn(...args);
+    }, time);
+  };
+}
 
 const Header = () => {
   const [serachValue, setSearchValue] = useState("");
@@ -10,18 +23,6 @@ const Header = () => {
     setSearchValue(e.target.value);
     debounce(setSearchValue(e.target.value), 200);
   };
-
-  function debounce(fn, time) {
-    let timer;
-    return function (...args) {
-      if (timer) {
-        clearTimeout(timer);
-      }
-      timer = setTimeout(() => {
-        fn(...args);
-      }, time);
-    };
-  }
 
   return (
     <>
@@ -35,7 +36,13 @@ const Header = () => {
               placeholder="Search"
               onChange={handleChange}
             />
+            <SerachIcon  alt="serach-icon"/>
           </div>
+          <button className="subscribe-button">SUBSCRIBE</button>
+          <select className="language-selection">
+            <option>English</option>
+            <option>Hindi</option>
+          </select>
           <Link to="/login">
             <button className="login-button">LOGIN</button>
           </Link>

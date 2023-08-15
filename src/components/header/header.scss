@@ -9,22 +9,61 @@
   padding-left: 50px;
 }
 
+.search-and-login {
+  display: flex;
+  align-items: center;
+}
 .search-container {
-  width: 200px;
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+  width: 180px;
+  height: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+  svg {
+    width: 100%;
+    height: 70%;
+    color: #fff;
+    padding-left: 120px;
+  }
   .input-search {
     width: 100%;
     border: none;
-    color: #ccc;
+    color: #fff;
     background: transparent;
     overflow: hidden;
     border: 0px solid;
     outline: none;
   }
 }
+
+.subscribe-button {
+  color: #fff;
+  background-color: var(--brand-color);
+  height: 20px;
+  font-size: 12px;
+  border: none;
+  outline: 0;
+  margin-right: 10px;
+  font-style: normal;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.language-selection {
+  width: 78px;
+  background-color: transparent;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 .login-button {
+  padding-right: 50px;
   overflow: hidden;
-  color: #ccc;
+  color: #fff;
   border: 0px solid;
   cursor: pointer;
   background-color: transparent;
