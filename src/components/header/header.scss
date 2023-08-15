@@ -1,5 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   width: 115px;
   height: 42px;
   padding-left: 50px;
+}
+
+.search-container {
+  width: 200px;
+  border-bottom: 1px solid #ccc;
+  .input-search {
+    width: 100%;
+    border: none;
+    color: #ccc;
+    background: transparent;
+    overflow: hidden;
+    border: 0px solid;
+    outline: none;
+  }
+}
+.login-button {
+  overflow: hidden;
+  color: #ccc;
+  border: 0px solid;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
 }

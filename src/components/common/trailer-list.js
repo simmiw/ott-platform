@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./common.scss";
+import "./cards-trailer.scss";
 import trailersData from "./trailers-data";
 
 const TrailerList = () => {
@@ -17,14 +17,15 @@ const TrailerList = () => {
           {trailers.map((value) => {
             return (
               <div key={value.id} className="trailer">
-                <img src={value.imagepath}/>
-                <span className="content-title">{value.title}</span>
+                <img src={value.imagepath} />
+                <span title={value.title} className="content-title">
+                  {value.title}
+                </span>
               </div>
             );
           })}
         </div>
       ) : null}
-      
     </>
   );
 };

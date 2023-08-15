@@ -9,7 +9,8 @@ export default [
 
   {
     title: "Migel Wants to Fight",
-    imagepath: "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
+    imagepath:
+      "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
     trailerpath:
       "https://www.hotstar.com/in/miguel-wants-to-fight-trailer/1260147621",
     id: 2,
@@ -27,7 +28,8 @@ export default [
 
   {
     title: "Migel Wants to Fight",
-    imagepath: "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
+    imagepath:
+      "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
     trailerpath:
       "https://www.hotstar.com/in/miguel-wants-to-fight-trailer/1260147621",
     id: 4,
@@ -43,10 +45,10 @@ export default [
     id: 5,
   },
 
-
   {
     title: "Migel Wants to Fight",
-    imagepath: "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
+    imagepath:
+      "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
     trailerpath:
       "https://www.hotstar.com/in/miguel-wants-to-fight-trailer/1260147621",
     id: 6,
@@ -64,7 +66,8 @@ export default [
 
   {
     title: "Migel Wants to Fight",
-    imagepath: "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
+    imagepath:
+      "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
     trailerpath:
       "https://www.hotstar.com/in/miguel-wants-to-fight-trailer/1260147621",
     id: 8,
@@ -81,7 +84,8 @@ export default [
   },
   {
     title: "Migel Wants to Fight",
-    imagepath: "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
+    imagepath:
+      "https://ntvb.tmsimg.com/assets/p24798390_v_h8_aa.jpg?w=1280&h=720",
     trailerpath:
       "https://www.hotstar.com/in/miguel-wants-to-fight-trailer/1260147621",
     id: 10,
