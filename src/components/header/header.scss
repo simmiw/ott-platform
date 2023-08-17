@@ -22,13 +22,11 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #fff;
   svg {
-    width: 100%;
     height: 70%;
     color: #fff;
-    padding-left: 120px;
   }
   .input-search {
-    width: 100%;
+    flex: 1;
     border: none;
     color: #fff;
     background: transparent;

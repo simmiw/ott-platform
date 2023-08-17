@@ -12,7 +12,7 @@ const LoginViaEmail = ({ toggleLoginType }) => {
 
   return (
     <>
-      <div className="main-container">
+      <div className="main-login-container">
         <div className="login-container">
           <div className="heading">
             <div>

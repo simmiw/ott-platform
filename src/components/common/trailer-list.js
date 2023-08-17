@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./cards-trailer.scss";
-import trailersData from "./trailers-data";
+import trailersData from "../../mocks/trailers-data";
 
 const TrailerList = () => {
   const [trailers, setTrailers] = useState(null);
@@ -12,6 +12,7 @@ const TrailerList = () => {
   return (
     <>
       {trailers ? (
+        <div className="cards-and-trailers">
         <div className="trailer-list">
           <div className="coming-soon-header">Coming Soon</div>
           {trailers.map((value) => {
@@ -24,6 +25,7 @@ const TrailerList = () => {
               </div>
             );
           })}
+        </div>
         </div>
       ) : null}
     </>

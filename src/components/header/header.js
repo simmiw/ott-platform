@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./header.scss";
 import image from "../../images/app-logo.svg";
-import { ReactComponent as SerachIcon } from "../../icons/serach-icon.svg";
+import { ReactComponent as SearchIcon } from "../../icons/search-icon.svg";
 import { Link } from "react-router-dom";
 
 function debounce(fn, time) {
@@ -36,7 +36,7 @@ const Header = () => {
               placeholder="Search"
               onChange={handleChange}
             />
-            <SerachIcon  alt="serach-icon"/>
+            <SearchIcon alt="Search" />
           </div>
           <button className="subscribe-button">SUBSCRIBE</button>
           <select className="language-selection">
