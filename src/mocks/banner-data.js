@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     imagepath:
-      "https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/3373/313373-h",
+      "https://e1.pxfuel.com/desktop-wallpaper/389/621/desktop-wallpaper-watch-criminal-justice-season-1-full-hotstar-criminal-justice-web-series.jpg",
     title: "Hostel",
     contentType: "Movie",
     genere: "Drama",
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     imagepath:
-      "https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/5307/395307-h",
+      "https://e1.pxfuel.com/desktop-wallpaper/639/516/desktop-wallpaper-disney-plus-disney-hotstar.jpg",
     title: "Run Baby Run",
     contentType: "Movie",
     genere: "Acion",
@@ -22,7 +22,7 @@ export default [
   {
     id: 3,
     imagepath:
-      "https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/7082/97082-h",
+      "https://e0.pxfuel.com/wallpapers/532/63/desktop-wallpaper-dil-bechara-release-today.jpg",
     title: "Sanju",
     contentType: "Movie",
     genere: "Biopic",
