@@ -15,11 +15,18 @@ const Carousel = () => {
     setSelectedImageIndex(selectedImageIndex + 1);
   };
 
+  const previousBanner = () => {
+    setSelectedImageIndex(selectedImageIndex - 1);
+  };
+
   return (
     <>
       {carouselBanner ? (
         <div className="carousel-container">
-          <button className="previous-button">
+          <button
+            className="previous-button"
+            disabled={selectedImageIndex <= carouselBanner.length - 3}
+            onClick={previousBanner}>
             <PreviousIcon />
           </button>
           <div
@@ -28,16 +35,15 @@ const Carousel = () => {
             {carouselBanner.map((banner) => {
               return (
                 <div key={banner.id} className="carousel-banner">
-                  <img
-                    src={banner.imagepath}
-                    onClick={handleClick}
-                    alt="carousel-banner"
-                  />
+                  <img src={banner.imagepath} alt="carousel-banner" />
                 </div>
               );
             })}
           </div>
-          <button className="forward-button">
+          <button
+            className="forward-button"
+            disabled={selectedImageIndex >= carouselBanner.length - 1}
+            onClick={handleClick}>
             <PreviousIcon />
           </button>
         </div>
