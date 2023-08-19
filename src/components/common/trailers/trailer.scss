@@ -1,0 +1,44 @@
+.coming-soon-header {
+  color: #fff;
+  margin: 30px 0 8px 0;
+  font-size: medium;
+}
+
+.trailer-list {
+  white-space: nowrap;
+  overflow: auto;
+
+  .trailer {
+    display: inline-block;
+    width: 170px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #192133;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.content-title {
+  padding: 0 50px 0 50px;
+  position: absolute;
+  max-width: 60%;
+  bottom: 4px;
+  left: 10px;
+  text-align: left;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #ccc;
+  line-height: normal;
+  background: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

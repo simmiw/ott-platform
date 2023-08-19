@@ -28,7 +28,7 @@ const LoginViaMobile = ({ toggleLoginType }) => {
 
   return (
     <>
-      <div className="main-login-containe">
+      <div className="main-login-container">
         <div className="login-container">
           <div className="heading">
             <div>

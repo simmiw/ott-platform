@@ -1,0 +1,31 @@
+.disney-original-header {
+  color: #fff;
+  margin: 20px 0 8px 0;
+  font-size: medium;
+}
+
+.made-in-india-header {
+  color: #fff;
+  margin: 20px 0 8px 0;
+  font-size: medium;
+}
+
+.card-list {
+  white-space: nowrap;
+  overflow: auto;
+
+  .card {
+    display: inline-block;
+    width: 160px;
+    height: 140px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #192133;
+
+    img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

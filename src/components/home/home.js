@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../header/header";
-import Cards from "../common/cards";
-import TrailerList from "../common/trailer-list";
-import Carousel from "../common/carousel";
+import Cards from "../common/cards/cards";
+import TrailerList from "../common/trailers/trailer";
+import Carousel from "../common/carousel/carousel";
 import "./home.scss";
 
 const Home = () => {

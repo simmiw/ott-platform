@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import bannerData from "../../mocks/banner-data";
+import bannerData from "../../../mocks/carousel-data";
 import "./carousel.scss";
-import { ReactComponent as PreviousIcon } from "../../icons/previous-icon.svg";
+import { ReactComponent as PreviousIcon } from "../../../icons/previous-icon.svg";
 
 const Carousel = () => {
   const [carouselBanner, setCarouselBanner] = useState("");
@@ -25,7 +25,7 @@ const Carousel = () => {
         <div className="carousel-container">
           <button
             className="previous-button"
-            disabled={selectedImageIndex <= carouselBanner.length - 3}
+            disabled={selectedImageIndex === 0}
             onClick={previousBanner}>
             <PreviousIcon />
           </button>
@@ -42,7 +42,7 @@ const Carousel = () => {
           </div>
           <button
             className="forward-button"
-            disabled={selectedImageIndex >= carouselBanner.length - 1}
+            disabled={selectedImageIndex === carouselBanner.length - 1}
             onClick={handleClick}>
             <PreviousIcon />
           </button>
