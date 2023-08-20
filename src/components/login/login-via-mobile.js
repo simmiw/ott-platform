@@ -21,7 +21,7 @@ const LoginViaMobile = ({ toggleLoginType }) => {
       setErrorMessage(!isValidMobile(mobileNumber));
     }
   };
-
+  
   const clearState = () => {
     setMobileNumber("");
   };
