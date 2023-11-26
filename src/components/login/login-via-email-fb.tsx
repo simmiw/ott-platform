@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import "./login.scss";
-import { ReactComponent as LeftArrowIcon } from "../../icons/left-arrow.svg";
-import { ReactComponent as FbLogo } from "../../icons/facebook-logo.svg";
+import LeftArrowIcon from "../../icons/leftArrow";
+import FbLogo from "../../icons/fbLogo";
 
-const LoginViaEmail = ({ toggleLoginType }) => {
-  const [email, setEmail] = useState("");
+interface ChildComponentProps {
+  toggleLoginType: () => void;
+}
 
-  const loginViaEmail = (event) => {
-    setEmail(event.target.value);
+const LoginViaEmail:React.FC<ChildComponentProps> = ({ toggleLoginType}) => {
+  const [email, setEmail] = useState<string>("");
+
+  const loginViaEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newEmail = event.target.value;
+    setEmail(newEmail);
   };
 
   return (
@@ -17,7 +22,7 @@ const LoginViaEmail = ({ toggleLoginType }) => {
           <div className="heading">
             <div>
               <button className="clear-button" onClick={toggleLoginType}>
-                <LeftArrowIcon alt="left-arrow" />
+                <LeftArrowIcon />
               </button>
             </div>
 
@@ -39,7 +44,7 @@ const LoginViaEmail = ({ toggleLoginType }) => {
             <button className="continue-button">CONTINUE</button>
             <div className="or-div">OR</div>
             <button className="login-with-fb">
-              <FbLogo alt="fb-logo" /> <span>LOGIN WITH FACEBOOK</span>
+              <FbLogo /> <span>LOGIN WITH FACEBOOK</span>
             </button>
           </div>
         </div>

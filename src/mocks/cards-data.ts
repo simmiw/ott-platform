@@ -1,4 +1,13 @@
-export default [
+interface CardsData {
+  title: string;
+  imagepath: string;
+  id: number;
+  description: string;
+
+}
+
+
+const cardsData:CardsData[]= [
   {
     title: "The Return of Abhimanyu",
     imagepath:
@@ -88,3 +97,5 @@ export default [
       "A heist action period film about an Indian queen, who seeks her bodyguard's help to seize the gold, which the government had raided from her palace during the Emergency in 1975.",
   },
 ];
+
+export default cardsData;
