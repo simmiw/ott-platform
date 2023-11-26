@@ -1,25 +1,14 @@
 import React, { useState } from "react";
 import "./header.scss";
-import image from "../../images/app-logo.svg";
-import { ReactComponent as SearchIcon } from "../../icons/search-icon.svg";
+import SearchIcon from "../../icons/searchIcon";
 import { Link } from "react-router-dom";
-
-function debounce(fn, time) {
-  let timer;
-  return function (...args) {
-    if (timer) {
-      clearTimeout(timer);
-    }
-    timer = setTimeout(() => {
-      fn(...args);
-    }, time);
-  };
-}
+import debounce from "../../utils/debounce";
+import appLogo from "../../images/appLogo.svg";
 
 const Header = () => {
   const [serachValue, setSearchValue] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
     debounce(setSearchValue(e.target.value), 200);
   };
@@ -27,7 +16,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <img className="logo" src={image} alt="app-logo" />
+        <img src={appLogo} />
         <div className="search-and-login">
           <div className="search-container">
             <input
@@ -36,7 +25,7 @@ const Header = () => {
               placeholder="Search"
               onChange={handleChange}
             />
-            <SearchIcon alt="Search" />
+            <SearchIcon />
           </div>
           <button className="subscribe-button">SUBSCRIBE</button>
           <select className="language-selection">

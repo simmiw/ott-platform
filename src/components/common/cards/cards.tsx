@@ -2,8 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./cards.scss";
 import cardsData from "../../../mocks/cards-data";
 
+interface CardsData {
+  title: string;
+  imagepath: string;
+  id: number;
+  description: string;
+}
+
 const Cards = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<CardsData[]>([]);
 
   useEffect(() => {
     setData(cardsData);

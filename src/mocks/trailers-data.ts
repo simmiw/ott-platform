@@ -1,4 +1,12 @@
-export default [
+interface TrailersData {
+  title: string;
+  imagepath: string;
+  trailerpath: string;
+  id: number;
+  description?: string;
+}
+
+const tarilersData: TrailersData[] = [
   {
     title: "Liv and Maddie",
     imagepath:
@@ -93,3 +101,5 @@ export default [
       "Miguel chickens out of a fight, and now has to prove his masculinity.",
   },
 ];
+
+export default tarilersData;

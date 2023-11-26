@@ -2,12 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./trailer.scss";
 import trailersData from "../../../mocks/trailers-data";
 
-const TrailerList = () => {
-  const [trailers, setTrailers] = useState(null);
+interface TrailersData {
+  title: string;
+  imagepath: string;
+  trailerpath: string;
+  id: number;
+  description?: string;
+}
 
-  useEffect(() => {
-    setTrailers(trailersData);
-  }, []);
+const TrailerList = () => {
+  const [trailers, setTrailers] = useState<TrailersData[]>([]);
+
+  useEffect(() => setTrailers(trailersData), []);
 
   return (
     <>

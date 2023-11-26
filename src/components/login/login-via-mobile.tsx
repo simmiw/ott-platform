@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import "./login.scss";
-import { ReactComponent as LeftArrowIcon } from "../../icons/left-arrow.svg";
+import LeftArrowIcon from "../../icons/leftArrow";
 
-const isValidMobile = (value) => {
+interface ChildComponentProps {
+  toggleLoginType: () => void;
+}
+
+const isValidMobile = (value: string) => {
   return /^\d+$/.test(value) && value.length === 10;
 };
 
-const LoginViaMobile = ({ toggleLoginType }) => {
+const LoginViaMobile: React.FC<ChildComponentProps> = ({ toggleLoginType }) => {
   const [mobileNumber, setMobileNumber] = useState("");
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const onMobileNumberChange = (event) => {
+  const onMobileNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length <= 10) setMobileNumber(event.target.value);
   };
 
@@ -18,10 +22,12 @@ const LoginViaMobile = ({ toggleLoginType }) => {
     if (mobileNumber === "") {
       setErrorMessage(null);
     } else {
-      setErrorMessage(!isValidMobile(mobileNumber));
+      setErrorMessage(
+        isValidMobile(mobileNumber) ? "Please enter valid mobile number" : null
+      );
     }
   };
-  
+
   const clearState = () => {
     setMobileNumber("");
   };
@@ -34,7 +40,7 @@ const LoginViaMobile = ({ toggleLoginType }) => {
             <div>
               {mobileNumber ? (
                 <button className="clear-button" onClick={clearState}>
-                  <LeftArrowIcon alt="left-arrow" />
+                  <LeftArrowIcon />
                 </button>
               ) : null}
             </div>
@@ -60,16 +66,16 @@ const LoginViaMobile = ({ toggleLoginType }) => {
               <input
                 value={mobileNumber}
                 className="login-input"
-                type="text"
+                type="tel"
                 inputMode="numeric"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
                 placeholder="Enter your mobile number"
                 onChange={onMobileNumberChange}
                 onBlur={validateMobile}
               />
             </div>
-            <div className="error-message">
-              {errorMessage ? "Please enter valid mobile number" : null}
-            </div>
+            <div className="error-message">{errorMessage}</div>
 
             {mobileNumber ? (
               <button className="continue-button">CONTINUE</button>
